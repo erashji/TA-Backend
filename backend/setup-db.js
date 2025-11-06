@@ -6,10 +6,9 @@ async function setupDatabase() {
   try {
     // Create connection
     const connection = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER ,
-      password: process.env.DB_PASSWORD ,
-      database: process.env.DB_NAME
+    host: process.env.DB_HOST || 'seddb.cwqqlkcrophs.ap-south-1.rds.amazonaws.com',
+  user: process.env.DB_USER || 'admin',
+  password: process.env.DB_PASSWORD || 'Sedl12345'
     });
 
     console.log('Connected to MySQL server');

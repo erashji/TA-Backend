@@ -26,7 +26,7 @@ function devLog(...args) {
 
 // Use only the cors package, with correct config
 app.use(cors({
-  origin: process.env.FRONTEND_URL, 
+  origin: ['http://172.26.0.217:3004', 'http://0.0.0.0:3004'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-jwt-token'],
@@ -35,7 +35,7 @@ app.use(cors({
 
 // Ensure CORS preflight requests are handled for all routes
 app.options('*', cors({
-  origin: process.env.FRONTEND_URL,
+  origin: ['http://172.26.0.217:3004', 'http://0.0.0.0:3004'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-jwt-token'],
@@ -46,10 +46,10 @@ app.use(express.json());
 
 // Database connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST ,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD ,
-  database: process.env.DB_NAME
+  host: process.env.DB_HOST || 'seddb.cwqqlkcrophs.ap-south-1.rds.amazonaws.com',
+  user: process.env.DB_USER || 'admin',
+  password: process.env.DB_PASSWORD || 'Sedl12345',
+  database: process.env.DB_NAME || 'expense_tracker'
 });
 
 db.connect((err) => {

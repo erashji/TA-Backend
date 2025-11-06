@@ -1,0 +1,5 @@
+emp_code,username,first_name,last_name,email,mobile_number,designation_id,department_id,location_id,date_of_joining,first_reporting_manager_emp_code,second_reporting_manager_emp_code
+EMP001,john.doe,John,Doe,john.doe@example.com,9876543210,1,1,1,2022-01-15,EMP002,EMP003
+EMP002,jane.smith,Jane,Smith,jane.smith@example.com,8765432109,2,1,2,2021-12-01,EMP001,EMP003
+EMP003,mike.wilson,Mike,Wilson,mike.wilson@example.com,7654321098,3,2,3,2020-06-10,EMP001,EMP002
+EMP004,sarah.brown,Sarah,Brown,sarah.brown@example.com,6543210987,4,3,4,2023-03-20,EMP002,EMP001
