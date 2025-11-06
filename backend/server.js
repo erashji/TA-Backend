@@ -26,7 +26,7 @@ function devLog(...args) {
 
 // Use only the cors package, with correct config
 app.use(cors({
-  origin: ['http://172.26.0.217:3004', 'http://0.0.0.0:3004'],
+  origin: ['https://claimfrontend-rho.vercel.app', 'https://claimbackend-pi.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-jwt-token'],
@@ -35,7 +35,7 @@ app.use(cors({
 
 // Ensure CORS preflight requests are handled for all routes
 app.options('*', cors({
-  origin: ['http://172.26.0.217:3004', 'http://0.0.0.0:3004'],
+  origin: ['https://claimfrontend-rho.vercel.app', 'https://claimbackend-pi.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-jwt-token'],

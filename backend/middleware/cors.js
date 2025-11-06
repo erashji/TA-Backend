@@ -1,5 +1,5 @@
 const corsMiddleware = (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://172.26.0.217:3004');
+  res.header('Access-Control-Allow-Origin', 'https://claimfrontend-rho.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-jwt-token');
   res.header('Access-Control-Allow-Credentials', true);

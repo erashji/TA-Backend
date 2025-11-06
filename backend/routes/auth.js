@@ -188,7 +188,7 @@ router.post('/send-reset-password-link', async (req, res) => {
       [user.emp_id, token, expiresAt]
     );
     // Send email with reset link
-    const resetUrl = `${process.env.FRONTEND_URL || 'http://172.26.0.217:3004'}/activate-account?token=${token}`;
+    const resetUrl = `${process.env.FRONTEND_URL || 'https://claimfrontend-rho.vercel.app'}/activate-account?token=${token}`;
     const subject = 'Reset your Expense Tracker password';
     const html = `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f6f8fa; padding: 32px 0;">
